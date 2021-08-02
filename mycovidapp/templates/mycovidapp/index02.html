@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="">
+        {% csrf_token %}
+        <select name="selectedcountry">
+            {% for Country in country_list %}
+            <option>{{Country}}</option>
+            {% endfor %}
+    
+        </select>
+        <input type="submit" name="">
+
+    </form>
+
+   <h1>{{selectedcountry}}</h1> 
+  <p> NewConfirmed : {{NewConfirmed}} </p>
+  <P> TotalConfirmed : {{TotalConfirmed}} </P>
+  <p> NewDeaths : {{NewDeaths}} </p>
+  <p> TotalDeaths : {{TotalDeaths}} </p>
+  <p> NewRecovered : {{NewRecovered}} </p>
+  <p> TotalRecovered : {{TotalRecovered}} </p>
+    
+   
+
+    
+   
+    
+</body>
+</html>
